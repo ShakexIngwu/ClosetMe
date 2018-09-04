@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SignUp</title>
+</head>
+<style>
+body{
+    margin:0;
+    background-color: #ffe6e6; 
+}
+.topbar{
+    background-color:#ffcccc;
+    width:100%;
+}
+.logo{
+   width:220px;
+   margin-left:2%;
+}
+.signintop{
+    float: right;
+    width:40%;
+    overflow: hidden;
+}
+
+.box{
+    border: 1px solid transparent;
+    position:absolute;
+    width:60%;
+    margin-left:38%;
+    margin-top:3%;
+}
+h1{
+    margin-left:5%;
+}
+.container{
+    display:grid;
+    grid-template-areas: 'fname lname'
+                         'number number'  
+                         'email email'
+                         'password vpassword'
+                         'submit signin';
+    position:relative;
+    grid-gap:2em;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom:10%;
+}
+input[name="fname"]{
+    grid-area:fname;
+    padding: 12px;
+}
+input[name="lname"]{
+    grid-area:lname;
+    padding: 12px;
+}
+input[name="number"]{
+    grid-area:number;
+    padding: 12px;
+}
+input[name="password"]{
+    grid-area:password;
+    padding: 12px;
+}
+input[name="vpassword"]{
+    grid-area:vpassword;
+    padding: 12px;
+}
+input[name="email"]{
+    grid-area:email;
+    padding: 12px;
+}
+input[name="submit"]{
+    grid-area:submit;
+    color:white;
+    background-color:lightblue;
+    padding: 12px;
+}
+button{
+    grid-area:signin;
+    color:white;
+    background-color:lightgreen;
+    padding: 12px;
+
+}
+</style>
+<body>
+     <div class="topbar">
+         <img class="logo" src="img/logo.jpg" alt="Closet U">     
+         <form action="login.php" method="post">
+             <input type="email" name="email" placeholder="Email">
+             <input type="password" name="password" placeholder="Password">
+	     <input type="submit" name="signin" value="Sign In"></button>
+         </form>
+     </div>  
+     <div class="box">
+         <h1>Sign Up</h1>
+             <div class="container">
+		<form action="register.php" method="post">			
+		        <input type="text" name="fname" class="form-control" placeholder="First Name" required>
+                        <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+                        <input type="text" name="mobile" class="form-control" placeholder="Mobile No." required>
+                        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required>
+                        <input type="password" name="vpassword" class="form-control" placeholder="Confirm Password" required>
+			<input type="submit" name="submit" value="Submit"></button>
+	        </form>
+     	     </div>
+     </div>
+   
+</body>
+</html>
